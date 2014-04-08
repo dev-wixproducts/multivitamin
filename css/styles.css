@@ -1,0 +1,2319 @@
+@charset "UTF-8";
+/**
+ * $VITAMINS
+ * ==========================================================================
+ */
+/**
+ * Vitamin B (Base)
+ * --------------------------------------------------------------------------
+ */
+/**
+ * $VARIABLES
+ * ==========================================================================
+ */
+/**
+ * Set global border-box? (True/False)
+ * --------------------------------------------------------------------------
+ * This will apply "*, *:before, *:after { box-sizing: border-box }" in
+ * "_scaffolding.scss" if set to true, and is necessary if using Vitamin F.
+ */
+/**
+ * Set global position relative? (True/False)
+ * --------------------------------------------------------------------------
+ * This will apply "*, *:before, *:after { position: relative }" in
+ * "_scaffolding.scss" if set to true.
+ */
+/**
+ * English quote marks? (True/False)
+ * --------------------------------------------------------------------------
+ */
+/**
+ * If you want English quotes then please do not edit these; they’re only here
+ * because Sass needs them.
+ */
+/**
+ * If you need non-English quotes, please alter the following values accordingly:
+ */
+/**
+ * Base type configurations
+ * --------------------------------------------------------------------------
+ * Base font-size, line-height, and font-family for the project are 
+ * defined on <html> in "_scaffolding.scss", based on the variables below.
+ *
+ * 1. Used as the denominator in calculating the REM of a all other 
+ *    font-sizes that are defined using the "font-size" mixin, found in
+ *	  "_mixins.scss".
+ * 2. Used as a divisor in the same mixin as mentioned in (2) in order to 
+ *    calculate the appropriate line-height for those font-sizes.
+ */
+/* 1 */
+/* 2 */
+/**
+ * Utility font sizes
+ * --------------------------------------------------------------------------
+ * 1. Applied to "<small>" in "components/_smallprint.scss".
+ * 2. Applied to ".lead" class, for slightly larger paragraphs in 
+ *    "components/_paragraphs.scss".
+ */
+/* 1 */
+/* 2 */
+/**
+ * Heading font sizes
+ * --------------------------------------------------------------------------
+ * All headings as well as "<hgroup>" are styled in "components/_headings.scss".
+ */
+/**
+ * Base spacing units
+ * --------------------------------------------------------------------------
+ * This base spacing unit will be primarily used for bottom margins on most
+ * base HTML elements. This is applied in the "components/_shared.scss" file.
+ * The half spacing unit is primarily used for margins on floated objects
+ * and form fields.
+ */
+/**
+ * Grid variables
+ * --------------------------------------------------------------------------
+ * Variables relative to the Grid, starting with weather or not you want to
+ * make it responsive.
+ */
+/**
+ * Container widths (Sets max content width)
+ */
+/**
+ * Breakpoints based on screen size
+ */
+/**
+ * Defined end-points for Media Queries
+ */
+/**
+ * Base UI colors
+ * --------------------------------------------------------------------------
+ * This $ui-color is simply serving as a placeholder, and is not used.
+ * Go ahead and start creating your projects own color pallette to be applied 
+ * to your modifier classes.
+ */
+/**
+ * $MIXINS
+ * ==========================================================================
+ * A handful of some very vital and helpful mixins for Vitamin CSS.
+ */
+/**
+ * Clearfix
+ * --------------------------------------------------------------------------
+ */
+/**
+ * Font Size
+ * --------------------------------------------------------------------------
+ */
+/**
+ * Headings
+ * --------------------------------------------------------------------------
+ */
+/**
+ * Unstyled Lists
+ * --------------------------------------------------------------------------
+ */
+/**
+ * Vendor Prefixer
+ * --------------------------------------------------------------------------
+ */
+/**
+ * Animation Prefixer
+ * --------------------------------------------------------------------------
+ */
+/**
+ * Animation Prefixer
+ * --------------------------------------------------------------------------
+ */
+/**
+* Placeholder
+* --------------------------------------------------------------------------
+*/
+/**
+* Media Query
+* --------------------------------------------------------------------------
+*/
+/**
+ * $NORMALIZE
+ * ==========================================================================
+ */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   -------------------------------------------------------------------------- */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   -------------------------------------------------------------------------- */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   -------------------------------------------------------------------------- */
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   -------------------------------------------------------------------------- */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   -------------------------------------------------------------------------- */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   -------------------------------------------------------------------------- */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8+, and Opera
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   -------------------------------------------------------------------------- */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/**
+ * $RESET
+ * ==========================================================================
+ * An extended reset beyond normalize that clears more default browser 
+ * stylings in order to provide a truely clean slate. I highly recommend 
+ * reading through normalize, so you have a good understanding of everything
+ * it effects.
+ */
+/**
+ * Shared Reset
+ * --------------------------------------------------------------------------
+ * Reset margins and paddings on all base html elements, as we define margins
+ * ourselves with @base-spacing-unit in the base config file, padding else
+ * where as needed.
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Horizontal Rule Reset
+ * --------------------------------------------------------------------------
+ * Horizontal rules by default are an element with no height, "border-top:#000"
+ * and "border-bottom:#fff". We remove the white border for a cleaner "flat"
+ * look.
+ */
+hr {
+  border-bottom: none;
+}
+
+/**
+ * Iframe Reset
+ * --------------------------------------------------------------------------
+ * Remove default borders on iframe, as it just makes for a
+ * cleaner default.
+ */
+iframe {
+  border: 0;
+}
+
+/**
+ * Fieldset Reset
+ * --------------------------------------------------------------------------
+ * 1. Ensure it behaves more like a standard block element.
+ * 2. Remove border for a cleaner defualt.
+ */
+fieldset {
+  min-width: 0;
+  /* 1 */
+  border: 0;
+  /* 2 */
+}
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+/**
+ * $SCAFFOLDING
+ * ==========================================================================
+ * Here are any base styles added to all elements (*), <html> or <body>.
+ * If adding a background image or color to the body, I'd suggest doing
+ * that here as well.
+ */
+html {
+  font: 1em/1.5 sans-serif;
+  overflow-y: scroll;
+  min-height: 100%;
+}
+
+body {
+  /* Body Styles */
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  position: relative;
+}
+
+/**
+ * Vitamin E (Elements)
+ * --------------------------------------------------------------------------
+ */
+/**
+ * $BUTTONS
+ * ==========================================================================
+ * The button classes are best applied to links, buttons, and submit inputs.
+ * These components can be used in forms, as calls to action, or as part of the
+ * general UI.
+ *
+ *	Recommended use:
+ *
+ *	<a class="button [button--modifier]" role="button" href="[url]">Button text</a>
+ *	<button class="button [button--modifier]" type="submit">Button text</button>
+ *	<input class="button [button--modifier]" type="submit" value="Button text">
+ */
+/**
+ * Base Button
+ * --------------------------------------------------------------------------
+ * This boilerplate button class provides somewhat of a reset, so that
+ * the ".button" class can look the same on links, buttons, and submit inputs.
+ * It also serves as some very base styling. This shouldn't need any changes.
+ * Instead, one should build off this boilerplate button with style modifiers
+ * like shown in the above examples.
+ */
+.button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  white-space: nowrap;
+  font-family: inherit;
+  line-height: normal;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  /* UI States */
+}
+.button:hover, .button:active, .button:focus {
+  text-decoration: none;
+  outline: none;
+}
+.button:-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.button:disabled, .button.disabled {
+  cursor: default;
+}
+
+/**
+ * Button Sizes
+ * --------------------------------------------------------------------------
+ * Place your button size modifiers here. Below are a few examples of some
+ * modifiers that I use, but feel free to delete these and create your own.
+ * Notice, I redifine the ".button" class giving it a default sizing.
+ */
+.button {
+  font-size: 16px;
+  padding: 12px 48px;
+}
+
+/**
+* Button Functions
+* --------------------------------------------------------------------------
+* Place styles in the same fashion as button sizes here for various button
+* functions. Such as ".button--success" or ".button--error".
+*/
+/**
+* Button Aesthetics
+* --------------------------------------------------------------------------
+* Place styles in the same fashion as button sizes here for various generic
+* button styles, of which might include base ui colors you set in the base
+* "_variables.scss" file. Again, below is a common way I would go about it, but
+* feel free to delete this and create your own. Notice, I redifine the 
+* ".button" class giving it a default aesthetics.
+*/
+.button {
+  background-color: #B4D455;
+}
+
+/**
+ * $FIGURE
+ * --------------------------------------------------------------------------
+ * Needs testing... Not done.
+ */
+figure {
+  clear: both;
+}
+figure img, figure embed, figure iframe {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+figure figcaption {
+  width: 100%;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.figure--left {
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+.figure--right {
+  float: right;
+  margin-bottom: 24px;
+  margin-left: 24px;
+}
+
+.figure--split-caption-left > * {
+  float: right;
+}
+.figure--split-caption-left img, .figure--split-caption-left embed, .figure--split-caption-left iframe {
+  width: 70%;
+}
+.figure--split-caption-left figcaption {
+  width: 30%;
+  padding-right: 12px;
+}
+
+.figure--split-caption-right > * {
+  float: left;
+}
+.figure--split-caption-right img, .figure--split-caption-right embed, .figure--split-caption-right iframe {
+  width: 70%;
+}
+.figure--split-caption-right figcaption {
+  width: 30%;
+  padding-right: 12px;
+}
+
+/**
+ * $CODE
+ * ==========================================================================
+ */
+/**
+ * Pre Wrap
+ * --------------------------------------------------------------------------
+ * Use the <pre> tag to wrap your code in as a block. Alter this to your needs.
+ * Also, Use an explicit font stack to ensure browsers render correct
+ * `line-height`.
+ */
+pre {
+  overflow: auto;
+  /* Add your paddings and background color */
+}
+pre:mark {
+  background: none;
+  border-bottom: 1px solid;
+  color: inherit;
+}
+
+/**
+ * Base Code
+ * --------------------------------------------------------------------------
+ *	Base styles for the <code> element.
+ */
+/**
+ * Code Comments
+ * --------------------------------------------------------------------------
+ * Apply comments inside your code like so...
+ *	
+ *	<code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
+ *
+ */
+.code-comment {
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+
+/**
+ * $FORMS
+ * ==========================================================================
+ * For forms we supply a base class structure, and a very minimal amount of
+ * layout styling. For a greater ability to manipulate the way your forms
+ * layout, including fluid inline forms, check out Vitamin A (Arrange).
+ */
+/**
+ * Form Scaffolding
+ * --------------------------------------------------------------------------
+ * These are some base styles and resets on input type to allow for cleaner
+ * consistant styling on modifier classes.
+ */
+.form {
+  /* Custom Form Styles */
+}
+
+.form__item {
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+}
+
+/**
+ * Form Control
+ * --------------------------------------------------------------------------
+ * The form control class is the base class that drives the styling on 90% of
+ * of form elements, and should be applied directly to inputs, textareas, and
+ * selects. See the example of usage below...
+ *
+ *	<div class="form__item">
+ *      <label>
+ *          <strong>Name</strong>
+ *          <input class="form-control" id="name" placeholder="Name">
+ *      </label>
+ *  </div>
+ *
+ */
+.form-control {
+  /* Base and Resets */
+  display: block;
+  width: 100%;
+  outline: none;
+  line-height: normal;
+  /* Form Element Aesthetics Here */
+}
+
+/**
+ * Form Type
+ * --------------------------------------------------------------------------
+ * Modify styling of verious type elements here. Currently we have set labels
+ * and legends to behave more like headers.
+ */
+label,
+legend {
+  display: block;
+  width: 100%;
+}
+
+/**
+ * Misc Resets
+ * --------------------------------------------------------------------------
+ * These are some miscellaneous resets that may not have the form-control class
+ * applied to them.
+ *
+ * 1. Removes firefox select dropdown arrow. 
+ * 2. Display block for content form flow, and making sure labels stack over inputs.
+ * 3. Position radios and checkboxes better.
+ */
+select {
+  /* 1 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+
+input[type="file"],
+input[type="range"] {
+  /* 2 */
+  display: block;
+}
+
+input[type="range"] {
+  /* 2 */
+  width: 100%;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  /* 3 */
+  margin: 4px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+
+/**
+ * $HEADINGS
+ * ==========================================================================
+ */
+/**
+ * Heading Sizes
+ * --------------------------------------------------------------------------
+ * Here we are using the font-size mixin to not only set the appropriate REM
+ * font size based on the PX size provided in the config file, but also to 
+ * achieve the appropriate line-height. See "_mixins.scss" for a better look.
+ */
+h1, .h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333;
+}
+
+h2, .h2 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6;
+}
+
+h3, .h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+h4, .h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+h5, .h5 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h6, .h6 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+}
+
+/**
+ * Heading Groups
+ * --------------------------------------------------------------------------
+ * Here, we remove heading margins when inside a header group so they stack
+ * nicely. The heading group contains its' own margin, which is set in the
+ * shared file. 
+ *
+ * Note: We are using the headings mixin to select all headers in one swoop.
+ */
+hgroup h1, hgroup .hgroup h1, .hgroup hgroup h1, hgroup h2, hgroup .hgroup h2, .hgroup hgroup h2, hgroup h3, hgroup .hgroup h3, .hgroup hgroup h3, hgroup h4, hgroup .hgroup h4, .hgroup hgroup h4, hgroup h5, hgroup .hgroup h5, .hgroup hgroup h5, hgroup h6, hgroup .hgroup h6, .hgroup hgroup h6, .hgroup h1, .hgroup h2, .hgroup h3, .hgroup h4, .hgroup h5, .hgroup h6 {
+  margin-bottom: 0;
+}
+
+/**
+ * $ICONS
+ * ==========================================================================
+ * Define your icon font families here, and define whatever classes hook them in.
+ */
+/**
+ * $IMAGES
+ * ==========================================================================
+ */
+/**
+ * Fluid Images
+ * --------------------------------------------------------------------------
+ * 1. Default images to be fluid in width.
+ * 2. Non-fluid images if you specify `width` and/or `height` attributes.
+ */
+img {
+  max-width: 100%;
+  /* 1 */
+}
+
+img[width],
+img[height] {
+  max-width: none;
+  /* 2 */
+}
+
+/**
+ * Image Aesthetics
+ * --------------------------------------------------------------------------
+ * Place any image modifier classes here that might change the aethetics of
+ * and image.
+ * IE. an ".img--round" class that adds a border-radius.
+ */
+/**
+ * Image Floating
+ * --------------------------------------------------------------------------
+ * Float images right, left, or center with the below classes.
+ */
+.img--right {
+  float: right;
+  margin-bottom: 24px;
+  margin-left: 24px;
+}
+
+.img--left {
+  float: left;
+  margin-right: 24px;
+  margin-bottom: 24px;
+}
+
+.img--center {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 24px;
+  margin-left: auto;
+}
+
+/**
+ * $LINKS
+ * --------------------------------------------------------------------------
+ * Set styling to your basic anchors below. By default we have removed the
+ * underline text decoration for a cleaner default.
+ */
+a {
+  text-decoration: none;
+}
+
+/**
+ * $LISTS
+ * ==========================================================================
+ */
+/**
+ * Set left margin on lists.
+ */
+ul, ol, dd {
+  margin-left: 24px;
+  margin-left: 1.5rem;
+}
+
+/**
+ * Remove vertical spacing from nested lists.
+ */
+li > ul,
+li > ol, li:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * Simple utility class (list reset) to add when you want an unstyled list.
+ *
+ * I would reccomend adding the mixin to any unique modules you are building, 
+ * rather than adding the utility class to your markup. Notice with this mixin,
+ * setting $margin-bottom to true will keep the usual bottom margin. If taking 
+ * a list outside the usual content flow, you can set this to false for an 
+ * extended reset.
+ */
+.lr {
+  list-style: none;
+  margin-left: 0;
+}
+
+/**
+ * $PARAGRAPHS
+ * ==========================================================================
+ * The paragraph styles are set entirely through inheriting base styles set
+ * on the HTML element in the scaffolding file and the margin applied in
+ * the shared file. As such, this file is primarily for paragraph modifiers.
+ */
+/**
+ * Paragraph Lead
+ * --------------------------------------------------------------------------
+ * A paragraph modifier class for a slightly larger font-size, usually used
+ * on the first paragraph of a section.
+ */
+.lead {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+/**
+ * $QUOTES
+ * ==========================================================================
+ * If English quotes are set in "base/_variables.scss", and are defined here.
+ */
+/**
+ * Big up @boblet: html5doctor.com/blockquote-q-cite
+ */
+/**
+ * Inline quotes.
+ */
+q {
+  quotes: "\2018" "\2019" "\201C" "\201D";
+}
+q:before {
+  content: "\2018";
+  content: open-quote;
+}
+q:after {
+  content: "\2019";
+  content: close-quote;
+}
+q q:before {
+  content: "\201C";
+  content: open-quote;
+}
+q q:after {
+  content: "\201D";
+  content: close-quote;
+}
+
+blockquote {
+  quotes: "\201C" "\201D";
+}
+blockquote p:before {
+  content: "\201C";
+  content: open-quote;
+}
+blockquote p:after {
+  content: "";
+  content: no-close-quote;
+}
+blockquote p:last-of-type:after {
+  content: "\201D";
+  content: close-quote;
+}
+blockquote q:before {
+  content: "\2018";
+  content: open-quote;
+}
+blockquote q:after {
+  content: "\2019";
+  content: close-quote;
+}
+
+/**
+ *
+   <blockquote>
+       <p>Insanity: doing the same thing over and over again and expecting
+       different results.</p>
+       <b class=source>Albert Einstein</b>
+   </blockquote>
+ *
+ */
+blockquote {
+  /**
+   * .4em is roughly equal to the width of the opening “ that we wish to hang.
+   */
+  text-indent: -0.41em;
+  margin-left: 0.41em;
+}
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+
+.source {
+  display: block;
+  text-indent: 0;
+}
+.source:before {
+  content: "\2014";
+}
+
+/**
+ * $RULES
+ * ==========================================================================
+ */
+/**
+ * Base Horizontal Rule
+ * --------------------------------------------------------------------------
+ * 1. Set base margin minus 1px to counter borders (Normally this would be 2px,
+ *    but we've removed the usual bottom border in the "base/_reset.scss" file).
+ * 2. Center rule, in the case a modifier or utility class reduces the width.
+ */
+hr {
+  margin-bottom: 23px;
+  /* 1 */
+  margin-bottom: 1.4375rem;
+  /* 1 */
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
+}
+
+/**
+ * $SHARED
+ * ==========================================================================
+ * Below are a handful of styles applied to many core content elements.
+ */
+/**
+ * Bottom Margins (Vertical Spacing)
+ * --------------------------------------------------------------------------
+ * Set a new global bottom margin to key content elements to achieve the ideal
+ * vertical rythm.
+ */
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dl,
+blockquote, p, address,
+table,
+fieldset, figure,
+pre,
+.h1, .h2, .h3, .h4, .h5, .h6, .hgroup {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+
+/**
+ * $SMALLPRINT
+ * ==========================================================================
+ */
+small,
+.small {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2;
+}
+
+/**
+ * $TABLES
+ * ==========================================================================
+ * We have a lot at our disposal for making very complex table constructs, e.g.:
+ *
+ *	<table class="table--bordered  table--striped  table--data">
+ *	   <colgroup>
+ *	       <col class=t10>
+ *	       <col class=t10>
+ *	       <col class=t10>
+ *	       <col>
+ *	   </colgroup>
+ *	   <thead>
+ *	       <tr>
+ *	           <th colspan=3>Foo</th>
+ *	           <th>Bar</th>
+ *	       </tr>
+ *	       <tr>
+ *	           <th>Lorem</th>
+ *	           <th>Ipsum</th>
+ *	           <th class=numerical>Dolor</th>
+ *	           <th>Sit</th>
+ *	       </tr>
+ *	   </thead>
+ *	   <tbody>
+ *	       <tr>
+ *	           <th rowspan=3>Sit</th>
+ *	           <td>Dolor</td>
+ *	           <td class=numerical>03.788</td>
+ *	           <td>Lorem</td>
+ *	       </tr>
+ *	       <tr>
+ *	           <td>Dolor</td>
+ *	           <td class=numerical>32.210</td>
+ *	           <td>Lorem</td>
+ *	       </tr>
+ *	       <tr>
+ *	           <td>Dolor</td>
+ *	           <td class=numerical>47.797</td>
+ *	           <td>Lorem</td>
+ *	       </tr>
+ *	       <tr>
+ *	           <th rowspan=2>Sit</th>
+ *	           <td>Dolor</td>
+ *	           <td class=numerical>09.640</td>
+ *	           <td>Lorem</td>
+ *	       </tr>
+ *	       <tr>
+ *	           <td>Dolor</td>
+ *	           <td class=numerical>12.117</td>
+ *	           <td>Lorem</td>
+ *	       </tr>
+ *	   </tbody>
+ *	</table>
+ *
+ */
+table {
+  width: 100%;
+}
+
+th,
+td {
+  padding: 6px;
+  text-align: left;
+}
+@media screen and (min-width: 480px) {
+  th,
+  td {
+    padding: 12px;
+  }
+}
+
+/**
+ * Cell alignment
+ * --------------------------------------------------------------------------
+ */
+[colspan] {
+  text-align: center;
+}
+
+[colspan="1"] {
+  text-align: left;
+}
+
+[rowspan] {
+  vertical-align: middle;
+}
+
+[rowspan="1"] {
+  vertical-align: top;
+}
+
+.numerical {
+  text-align: right;
+}
+
+/**
+ * In the HTML above we see several `col` elements with classes whose numbers
+ * represent a percentage width for that column. We leave one column free of a
+ * class so that column can soak up the effects of any accidental breakage in
+ * the table.
+ */
+.t5 {
+  width: 5%;
+}
+
+.t10 {
+  width: 10%;
+}
+
+.t12 {
+  width: 12.5%;
+}
+
+/* 1/8 */
+.t15 {
+  width: 15%;
+}
+
+.t20 {
+  width: 20%;
+}
+
+.t25 {
+  width: 25%;
+}
+
+/* 1/4 */
+.t30 {
+  width: 30%;
+}
+
+.t33 {
+  width: 33.333%;
+}
+
+/* 1/3 */
+.t35 {
+  width: 35%;
+}
+
+.t37 {
+  width: 37.5%;
+}
+
+/* 3/8 */
+.t40 {
+  width: 40%;
+}
+
+.t45 {
+  width: 45%;
+}
+
+.t50 {
+  width: 50%;
+}
+
+/* 1/2 */
+.t55 {
+  width: 55%;
+}
+
+.t60 {
+  width: 60%;
+}
+
+.t62 {
+  width: 62.5%;
+}
+
+/* 5/8 */
+.t65 {
+  width: 65%;
+}
+
+.t66 {
+  width: 66.666%;
+}
+
+/* 2/3 */
+.t70 {
+  width: 70%;
+}
+
+.t75 {
+  width: 75%;
+}
+
+/* 3/4*/
+.t80 {
+  width: 80%;
+}
+
+.t85 {
+  width: 85%;
+}
+
+.t87 {
+  width: 87.5%;
+}
+
+/* 7/8 */
+.t90 {
+  width: 90%;
+}
+
+.t95 {
+  width: 95%;
+}
+
+/**
+ * Bordered Tables
+ * --------------------------------------------------------------------------
+ */
+.table--bordered th,
+.table--bordered td {
+  border: 1px solid;
+}
+.table--bordered th:empty,
+.table--bordered td:empty {
+  border: none;
+}
+.table--bordered thead tr:last-child th {
+  border-bottom-width: 2px;
+}
+.table--bordered tbody tr th:last-of-type {
+  border-right-width: 2px;
+}
+
+/**
+ * Striped Tables
+ * --------------------------------------------------------------------------
+ */
+.table--striped tbody tr:nth-of-type(odd) {
+  background-color: #ffc;
+  /* Override this color in your theme stylesheet */
+}
+
+/**
+ * Data Tables
+ * --------------------------------------------------------------------------
+ */
+.table--data {
+  font: 12px/1.5 sans-serif;
+}
+
+/**
+ * Vitamin U (Utilities)
+ * --------------------------------------------------------------------------
+ */
+/**
+ * $GRID
+ * ==========================================================================
+ */
+.container {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.container.container--wide {
+  max-width: 960px;
+}
+.container.container--skinny {
+  max-width: 700px;
+}
+
+.grid {
+  display: block;
+  margin: 0 auto;
+  font-size: 0;
+  margin-left: -24px;
+}
+.grid .grid {
+  padding: 0;
+}
+.grid.grid--gutterless {
+  padding-left: 10px;
+  margin-left: 0;
+}
+.grid.grid--gutterless .grid__item {
+  padding: 0;
+}
+
+.grid--block {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+
+.grid__item {
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0;
+  padding-left: 24px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/**
+ * $WIDTHS
+ * ==========================================================================
+ * Sizes in human readable format. These are used in conjunction with other
+ * objects and abstractions, most commonly the grid system.
+ *
+ * We have a mixin to generate our widths and their breakpoint-specific
+ * variations.
+ */
+/**
+* Whole
+*/
+.one-whole {
+  width: 100%;
+}
+
+/**
+* Halves
+*/
+.one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
+  width: 50%;
+}
+
+/**
+* Thirds
+*/
+.one-third, .two-sixths, .four-twelfths {
+  width: 33.333%;
+}
+
+.two-thirds, .four-sixths, .eight-twelfths {
+  width: 66.666%;
+}
+
+/**
+* Quarters
+*/
+.one-quarter, .two-eighths, .three-twelfths {
+  width: 25%;
+}
+
+.three-quarters, .six-eighths, .nine-twelfths {
+  width: 75%;
+}
+
+/**
+* Fifths
+*/
+.one-fifth, .two-tenths {
+  width: 20%;
+}
+
+.two-fifths, .four-tenths {
+  width: 40%;
+}
+
+.three-fifths, .six-tenths {
+  width: 60%;
+}
+
+.four-fifths, .eight-tenths {
+  width: 80%;
+}
+
+/**
+* Sixths
+*/
+.one-sixth, .two-twelfths {
+  width: 16.666%;
+}
+
+.five-sixths, .ten-twelfths {
+  width: 83.333%;
+}
+
+/**
+* Eighths
+*/
+.one-eighth {
+  width: 12.5%;
+}
+
+.three-eighths {
+  width: 37.5%;
+}
+
+.five-eighths {
+  width: 62.5%;
+}
+
+.seven-eighths {
+  width: 87.5%;
+}
+
+/**
+* Tenths
+*/
+.one-tenth {
+  width: 10%;
+}
+
+.three-tenths {
+  width: 30%;
+}
+
+.seven-tenths {
+  width: 70%;
+}
+
+.nine-tenths {
+  width: 90%;
+}
+
+/**
+* Twelfths
+*/
+.one-twelfth {
+  width: 8.333%;
+}
+
+.five-twelfths {
+  width: 41.666%;
+}
+
+.seven-twelfths {
+  width: 58.333%;
+}
+
+.eleven-twelfths {
+  width: 91.666%;
+}
+
+/**
+ * If you have set responsive to true in "arrange/_config.scss" then you now have
+ * access to these classes. You can define at which breakpoint you’d like an
+ * element to be a certain size, e.g.:
+ *
+ * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
+ *
+ * This would create a "div" that, at "desktop" sizes, takes up a quarter of the
+ * horizontal space, a half of that space at "tablet" sizes, and goes full width
+ * at "mobile" sizes.
+ */
+@media only screen and (max-width: 499px) {
+  /**
+  * Whole
+  */
+  .palm-one-whole {
+    width: 100%;
+  }
+
+  /**
+  * Halves
+  */
+  .palm-one-half, .palm-two-quarters, .palm-three-sixths, .palm-four-eighths, .palm-five-tenths, .palm-six-twelfths {
+    width: 50%;
+  }
+
+  /**
+  * Thirds
+  */
+  .palm-one-third, .palm-two-sixths, .palm-four-twelfths {
+    width: 33.333%;
+  }
+
+  .palm-two-thirds, .palm-four-sixths, .palm-eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+  * Quarters
+  */
+  .palm-one-quarter, .palm-two-eighths, .palm-three-twelfths {
+    width: 25%;
+  }
+
+  .palm-three-quarters, .palm-six-eighths, .palm-nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+  * Fifths
+  */
+  .palm-one-fifth, .palm-two-tenths {
+    width: 20%;
+  }
+
+  .palm-two-fifths, .palm-four-tenths {
+    width: 40%;
+  }
+
+  .palm-three-fifths, .palm-six-tenths {
+    width: 60%;
+  }
+
+  .palm-four-fifths, .palm-eight-tenths {
+    width: 80%;
+  }
+
+  /**
+  * Sixths
+  */
+  .palm-one-sixth, .palm-two-twelfths {
+    width: 16.666%;
+  }
+
+  .palm-five-sixths, .palm-ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+  * Eighths
+  */
+  .palm-one-eighth {
+    width: 12.5%;
+  }
+
+  .palm-three-eighths {
+    width: 37.5%;
+  }
+
+  .palm-five-eighths {
+    width: 62.5%;
+  }
+
+  .palm-seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+  * Tenths
+  */
+  .palm-one-tenth {
+    width: 10%;
+  }
+
+  .palm-three-tenths {
+    width: 30%;
+  }
+
+  .palm-seven-tenths {
+    width: 70%;
+  }
+
+  .palm-nine-tenths {
+    width: 90%;
+  }
+
+  /**
+  * Twelfths
+  */
+  .palm-one-twelfth {
+    width: 8.333%;
+  }
+
+  .palm-five-twelfths {
+    width: 41.666%;
+  }
+
+  .palm-seven-twelfths {
+    width: 58.333%;
+  }
+
+  .palm-eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 999px) {
+  /**
+  * Whole
+  */
+  .lap-one-whole {
+    width: 100%;
+  }
+
+  /**
+  * Halves
+  */
+  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths {
+    width: 50%;
+  }
+
+  /**
+  * Thirds
+  */
+  .lap-one-third, .lap-two-sixths, .lap-four-twelfths {
+    width: 33.333%;
+  }
+
+  .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+  * Quarters
+  */
+  .lap-one-quarter, .lap-two-eighths, .lap-three-twelfths {
+    width: 25%;
+  }
+
+  .lap-three-quarters, .lap-six-eighths, .lap-nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+  * Fifths
+  */
+  .lap-one-fifth, .lap-two-tenths {
+    width: 20%;
+  }
+
+  .lap-two-fifths, .lap-four-tenths {
+    width: 40%;
+  }
+
+  .lap-three-fifths, .lap-six-tenths {
+    width: 60%;
+  }
+
+  .lap-four-fifths, .lap-eight-tenths {
+    width: 80%;
+  }
+
+  /**
+  * Sixths
+  */
+  .lap-one-sixth, .lap-two-twelfths {
+    width: 16.666%;
+  }
+
+  .lap-five-sixths, .lap-ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+  * Eighths
+  */
+  .lap-one-eighth {
+    width: 12.5%;
+  }
+
+  .lap-three-eighths {
+    width: 37.5%;
+  }
+
+  .lap-five-eighths {
+    width: 62.5%;
+  }
+
+  .lap-seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+  * Tenths
+  */
+  .lap-one-tenth {
+    width: 10%;
+  }
+
+  .lap-three-tenths {
+    width: 30%;
+  }
+
+  .lap-seven-tenths {
+    width: 70%;
+  }
+
+  .lap-nine-tenths {
+    width: 90%;
+  }
+
+  /**
+  * Twelfths
+  */
+  .lap-one-twelfth {
+    width: 8.333%;
+  }
+
+  .lap-five-twelfths {
+    width: 41.666%;
+  }
+
+  .lap-seven-twelfths {
+    width: 58.333%;
+  }
+
+  .lap-eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 500px) {
+  /**
+  * Whole
+  */
+  .lap-and-up-one-whole {
+    width: 100%;
+  }
+
+  /**
+  * Halves
+  */
+  .lap-and-up-one-half, .lap-and-up-two-quarters, .lap-and-up-three-sixths, .lap-and-up-four-eighths, .lap-and-up-five-tenths, .lap-and-up-six-twelfths {
+    width: 50%;
+  }
+
+  /**
+  * Thirds
+  */
+  .lap-and-up-one-third, .lap-and-up-two-sixths, .lap-and-up-four-twelfths {
+    width: 33.333%;
+  }
+
+  .lap-and-up-two-thirds, .lap-and-up-four-sixths, .lap-and-up-eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+  * Quarters
+  */
+  .lap-and-up-one-quarter, .lap-and-up-two-eighths, .lap-and-up-three-twelfths {
+    width: 25%;
+  }
+
+  .lap-and-up-three-quarters, .lap-and-up-six-eighths, .lap-and-up-nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+  * Fifths
+  */
+  .lap-and-up-one-fifth, .lap-and-up-two-tenths {
+    width: 20%;
+  }
+
+  .lap-and-up-two-fifths, .lap-and-up-four-tenths {
+    width: 40%;
+  }
+
+  .lap-and-up-three-fifths, .lap-and-up-six-tenths {
+    width: 60%;
+  }
+
+  .lap-and-up-four-fifths, .lap-and-up-eight-tenths {
+    width: 80%;
+  }
+
+  /**
+  * Sixths
+  */
+  .lap-and-up-one-sixth, .lap-and-up-two-twelfths {
+    width: 16.666%;
+  }
+
+  .lap-and-up-five-sixths, .lap-and-up-ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+  * Eighths
+  */
+  .lap-and-up-one-eighth {
+    width: 12.5%;
+  }
+
+  .lap-and-up-three-eighths {
+    width: 37.5%;
+  }
+
+  .lap-and-up-five-eighths {
+    width: 62.5%;
+  }
+
+  .lap-and-up-seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+  * Tenths
+  */
+  .lap-and-up-one-tenth {
+    width: 10%;
+  }
+
+  .lap-and-up-three-tenths {
+    width: 30%;
+  }
+
+  .lap-and-up-seven-tenths {
+    width: 70%;
+  }
+
+  .lap-and-up-nine-tenths {
+    width: 90%;
+  }
+
+  /**
+  * Twelfths
+  */
+  .lap-and-up-one-twelfth {
+    width: 8.333%;
+  }
+
+  .lap-and-up-five-twelfths {
+    width: 41.666%;
+  }
+
+  .lap-and-up-seven-twelfths {
+    width: 58.333%;
+  }
+
+  .lap-and-up-eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (max-width: 999px) {
+  /**
+  * Whole
+  */
+  .portable-one-whole {
+    width: 100%;
+  }
+
+  /**
+  * Halves
+  */
+  .portable-one-half, .portable-two-quarters, .portable-three-sixths, .portable-four-eighths, .portable-five-tenths, .portable-six-twelfths {
+    width: 50%;
+  }
+
+  /**
+  * Thirds
+  */
+  .portable-one-third, .portable-two-sixths, .portable-four-twelfths {
+    width: 33.333%;
+  }
+
+  .portable-two-thirds, .portable-four-sixths, .portable-eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+  * Quarters
+  */
+  .portable-one-quarter, .portable-two-eighths, .portable-three-twelfths {
+    width: 25%;
+  }
+
+  .portable-three-quarters, .portable-six-eighths, .portable-nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+  * Fifths
+  */
+  .portable-one-fifth, .portable-two-tenths {
+    width: 20%;
+  }
+
+  .portable-two-fifths, .portable-four-tenths {
+    width: 40%;
+  }
+
+  .portable-three-fifths, .portable-six-tenths {
+    width: 60%;
+  }
+
+  .portable-four-fifths, .portable-eight-tenths {
+    width: 80%;
+  }
+
+  /**
+  * Sixths
+  */
+  .portable-one-sixth, .portable-two-twelfths {
+    width: 16.666%;
+  }
+
+  .portable-five-sixths, .portable-ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+  * Eighths
+  */
+  .portable-one-eighth {
+    width: 12.5%;
+  }
+
+  .portable-three-eighths {
+    width: 37.5%;
+  }
+
+  .portable-five-eighths {
+    width: 62.5%;
+  }
+
+  .portable-seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+  * Tenths
+  */
+  .portable-one-tenth {
+    width: 10%;
+  }
+
+  .portable-three-tenths {
+    width: 30%;
+  }
+
+  .portable-seven-tenths {
+    width: 70%;
+  }
+
+  .portable-nine-tenths {
+    width: 90%;
+  }
+
+  /**
+  * Twelfths
+  */
+  .portable-one-twelfth {
+    width: 8.333%;
+  }
+
+  .portable-five-twelfths {
+    width: 41.666%;
+  }
+
+  .portable-seven-twelfths {
+    width: 58.333%;
+  }
+
+  .portable-eleven-twelfths {
+    width: 91.666%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  /**
+  * Whole
+  */
+  .desk-one-whole {
+    width: 100%;
+  }
+
+  /**
+  * Halves
+  */
+  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths {
+    width: 50%;
+  }
+
+  /**
+  * Thirds
+  */
+  .desk-one-third, .desk-two-sixths, .desk-four-twelfths {
+    width: 33.333%;
+  }
+
+  .desk-two-thirds, .desk-four-sixths, .desk-eight-twelfths {
+    width: 66.666%;
+  }
+
+  /**
+  * Quarters
+  */
+  .desk-one-quarter, .desk-two-eighths, .desk-three-twelfths {
+    width: 25%;
+  }
+
+  .desk-three-quarters, .desk-six-eighths, .desk-nine-twelfths {
+    width: 75%;
+  }
+
+  /**
+  * Fifths
+  */
+  .desk-one-fifth, .desk-two-tenths {
+    width: 20%;
+  }
+
+  .desk-two-fifths, .desk-four-tenths {
+    width: 40%;
+  }
+
+  .desk-three-fifths, .desk-six-tenths {
+    width: 60%;
+  }
+
+  .desk-four-fifths, .desk-eight-tenths {
+    width: 80%;
+  }
+
+  /**
+  * Sixths
+  */
+  .desk-one-sixth, .desk-two-twelfths {
+    width: 16.666%;
+  }
+
+  .desk-five-sixths, .desk-ten-twelfths {
+    width: 83.333%;
+  }
+
+  /**
+  * Eighths
+  */
+  .desk-one-eighth {
+    width: 12.5%;
+  }
+
+  .desk-three-eighths {
+    width: 37.5%;
+  }
+
+  .desk-five-eighths {
+    width: 62.5%;
+  }
+
+  .desk-seven-eighths {
+    width: 87.5%;
+  }
+
+  /**
+  * Tenths
+  */
+  .desk-one-tenth {
+    width: 10%;
+  }
+
+  .desk-three-tenths {
+    width: 30%;
+  }
+
+  .desk-seven-tenths {
+    width: 70%;
+  }
+
+  .desk-nine-tenths {
+    width: 90%;
+  }
+
+  /**
+  * Twelfths
+  */
+  .desk-one-twelfth {
+    width: 8.333%;
+  }
+
+  .desk-five-twelfths {
+    width: 41.666%;
+  }
+
+  .desk-seven-twelfths {
+    width: 58.333%;
+  }
+
+  .desk-eleven-twelfths {
+    width: 91.666%;
+  }
+}
+/**
+ * Vitamin M (Modules)
+ * --------------------------------------------------------------------------
+ */
+/**
+ * $MASTHEAD
+ * ==========================================================================
+ * Masthead is used as the top section on pages, typically containing the 
+ * page title.
+ */
+/**
+ * $NAVBAR
+ * ==========================================================================
+ * This is the main navbar shown at the top of the page.
+ */
+/**
+ * $INTERLUDE
+ * ==========================================================================
+ * This is a typically a break in the content where useful information is
+ * placed.
+ */
+/**
+ * Vitamin V (Views)
+ * --------------------------------------------------------------------------
+ */
+/**
+ * $LANDING
+ * ==========================================================================
+ * This is a placeholder and example for a view.
+ */

@@ -1,0 +1,124 @@
+/**
+ * $VARIABLES
+ * ==========================================================================
+ */
+
+/**
+ * Set global border-box? (True/False)
+ * --------------------------------------------------------------------------
+ * This will apply "*, *:before, *:after { box-sizing: border-box }" in
+ * "_scaffolding.scss" if set to true, and is necessary if using Vitamin F.
+ */
+$border-box-global: 		true!default;
+
+/**
+ * Set global position relative? (True/False)
+ * --------------------------------------------------------------------------
+ * This will apply "*, *:before, *:after { position: relative }" in
+ * "_scaffolding.scss" if set to true.
+ */
+$position-relative-global:	true!default;
+
+/**
+ * English quote marks? (True/False)
+ * --------------------------------------------------------------------------
+ */
+$english-quotes:    		true!default;
+/**
+ * If you want English quotes then please do not edit these; they’re only here
+ * because Sass needs them.
+ */
+$open-quote:    			null;
+$close-quote:   			null;
+/**
+ * If you need non-English quotes, please alter the following values accordingly:
+ */
+@if $english-quotes != true{
+    $open-quote:    		\00AB;
+    $close-quote:   		\00BB;
+}
+
+/**
+ * Base type configurations
+ * --------------------------------------------------------------------------
+ * Base font-size, line-height, and font-family for the project are 
+ * defined on <html> in "_scaffolding.scss", based on the variables below.
+ *
+ * 1. Used as the denominator in calculating the REM of a all other 
+ *    font-sizes that are defined using the "font-size" mixin, found in
+ *	  "_mixins.scss".
+ * 2. Used as a divisor in the same mixin as mentioned in (2) in order to 
+ *    calculate the appropriate line-height for those font-sizes.
+ */
+$font-size-base: 			16px!default; /* 1 */
+$line-height-base: 			24px!default; /* 2 */
+$line-height-ratio: 		$line-height-base / $font-size-base;
+$font-family-base: 			sans-serif!default;
+
+/**
+ * Utility font sizes
+ * --------------------------------------------------------------------------
+ * 1. Applied to "<small>" in "components/_smallprint.scss".
+ * 2. Applied to ".lead" class, for slightly larger paragraphs in 
+ *    "components/_paragraphs.scss".
+ */
+$font-size-small: 			12px!default; /* 1 */
+$font-size-lead: 			20px!default; /* 2 */
+
+/**
+ * Heading font sizes
+ * --------------------------------------------------------------------------
+ * All headings as well as "<hgroup>" are styled in "components/_headings.scss".
+ */
+$font-size-h1:           	36px!default;
+$font-size-h2:           	30px!default;
+$font-size-h3:           	24px!default;
+$font-size-h4:           	20px!default;
+$font-size-h5:           	16px!default;
+$font-size-h6:           	14px!default;
+
+
+/**
+ * Base spacing units
+ * --------------------------------------------------------------------------
+ * This base spacing unit will be primarily used for bottom margins on most
+ * base HTML elements. This is applied in the "components/_shared.scss" file.
+ * The half spacing unit is primarily used for margins on floated objects
+ * and form fields.
+ */
+$spacing-unit-base: 		$line-height-base!default;
+$spacing-unit-half: 		$spacing-unit-base / 2;
+
+/**
+ * Grid variables
+ * --------------------------------------------------------------------------
+ * Variables relative to the Grid, starting with weather or not you want to
+ * make it responsive.
+ */
+$responsive: 				true!default;
+/**
+ * Container widths (Sets max content width)
+ */
+$container-width: 			840px!default;
+$container-width-wide: 		960px!default;
+$container-width-skinny:	700px!default;
+/**
+ * Breakpoints based on screen size
+ */
+$lap-start:         		500px!default;
+$desk-start:       			1000px!default;
+$desk-wide-start:   		1280px!default;
+/**
+ * Defined end-points for Media Queries
+ */
+$palm-end:              	$lap-start - 1px;
+$lap-end:               	$desk-start - 1px;
+
+/**
+ * Base UI colors
+ * --------------------------------------------------------------------------
+ * This $ui-color is simply serving as a placeholder, and is not used.
+ * Go ahead and start creating your projects own color pallette to be applied 
+ * to your modifier classes.
+ */
+$ui-color: 					#B4D455;
