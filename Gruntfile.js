@@ -4,31 +4,47 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		clean: {
-			styles: ['css/*.css'],
-			scripts: ['js/*.js']
+			scripts: ['js/scripts.js', 'js/scripts.min.js'],
+			vendors: ['js/vendors.js', 'js/vendors.min.js'],
+			styles: ['css/styles.css', 'css/styles.min.css'],
+			concat: ['css/src/vitamins.scss']
 		},
 
+		// Concats all javascript and SASS
 		concat: {
-			options: {
-				separator: ';',
-			},
-			dist: {
-				src: ['js/src/plugins/*.js', 'js/src/*.js'],
+			scripts: {
+				src: ['js/src/scripts/*.js'],
 				dest: 'js/scripts.js'
+			},
+			vendors: {
+				src: ['js/src/vendors/*.js'],
+				dest: 'js/vendors.js'
+			},
+			styles: {
+				src: ['css/src/base/variables.scss', 'css/src/**/*.scss'],
+				dest: 'css/src/vitamins.scss'
 			}
 		},
 
+		// Minifies javascript
 		uglify: {
-			build: {
+			scripts: {
 				src: 'js/scripts.js',
 				dest: 'js/scripts.min.js'
+			},
+			vendors: {
+				src: 'js/vendors.js',
+				dest: 'js/vendors.min.js'
 			}
 		},
 
+		// Converts SASS to CSS
 		sass: {
 			dist: {
 				options: {
-					style: 'expanded'
+					style: 'expanded',
+					cacheLocation: 'css/src/.sass-cache',
+					sourcemap: true
 				},
 				files: {
 					'css/styles.css': 'css/src/vitamins.scss'
@@ -36,6 +52,7 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// Applies vendor prefixes to CSS
 		autoprefixer: {
 			options: {
 				browsers: ['last 2 version', 'ie 8', 'ie 9']
@@ -45,6 +62,7 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// Minifies CSS
 		cssmin: {
 			minify: {
 				expand: true,
@@ -55,10 +73,15 @@ module.exports = function(grunt) {
 			}
 		},
 
+		// Watch command
 		watch: {
 			scripts: {
-				files: 'js/**/*.js',
-				tasks: ['clean:scripts', 'dist-js']
+				files: 'js/src/scripts/**/*.js',
+				tasks: ['clean:scripts', 'dist-scripts']
+			},
+			vendors: {
+				files: 'js/src/vendors/**/*.js',
+				tasks: ['clean:scripts', 'dist-vendors']
 			},
 			styles: {
 				files: 'css/**/*.scss',
@@ -71,7 +94,7 @@ module.exports = function(grunt) {
 
 	});
 
-	// These plugins provide necessary tasks
+	// Loads grunt dependencies
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-concat');
@@ -83,16 +106,19 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	// JS distribution task
-	grunt.registerTask('dist-js', ['clean:scripts', 'concat', 'uglify']);
+	// Scripts distribution task
+	grunt.registerTask('dist-scripts', ['clean:scripts', 'concat:scripts', 'uglify:scripts']);
 
-	// CSS distribution task
-	grunt.registerTask('dist-css', ['clean:styles', 'sass', 'autoprefixer', 'cssmin']);
+	// Vendors distribution task
+	grunt.registerTask('dist-vendors', ['clean:vendors', 'concat:vendors', 'uglify:vendors']);
+
+	// Styles distribution task
+	grunt.registerTask('dist-styles', ['clean:styles', 'clean:concat', 'concat:styles', 'sass', 'autoprefixer', 'cssmin', 'clean:concat']);
 
 	// Full distribution task
-	grunt.registerTask('dist', ['dist-css', 'dist-js']);
+	grunt.registerTask('dist', ['dist-scripts', 'dist-vendors', 'dist-styles']);
 
-	// Default task
+	// Default grunt task
 	grunt.registerTask('default', ['dist', 'watch']);
 
 };

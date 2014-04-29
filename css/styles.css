@@ -1,13 +1,5 @@
 @charset "UTF-8";
 /**
- * $VITAMINS
- * ==========================================================================
- */
-/**
- * Vitamin B (Base)
- * --------------------------------------------------------------------------
- */
-/**
  * $VARIABLES
  * ==========================================================================
  */
@@ -22,17 +14,6 @@
  * --------------------------------------------------------------------------
  * This will apply "*, *:before, *:after { position: relative }" in
  * "_scaffolding.scss" if set to true.
- */
-/**
- * English quote marks? (True/False)
- * --------------------------------------------------------------------------
- */
-/**
- * If you want English quotes then please do not edit these; they’re only here
- * because Sass needs them.
- */
-/**
- * If you need non-English quotes, please alter the following values accordingly:
  */
 /**
  * Base type configurations
@@ -627,10 +608,6 @@ body {
 }
 
 /**
- * Vitamin E (Elements)
- * --------------------------------------------------------------------------
- */
-/**
  * $BUTTONS
  * ==========================================================================
  * The button classes are best applied to links, buttons, and submit inputs.
@@ -714,6 +691,45 @@ body {
 }
 
 /**
+ * $CODE
+ * ==========================================================================
+ */
+/**
+ * Pre Wrap
+ * --------------------------------------------------------------------------
+ * Use the <pre> tag to wrap your code in as a block. Alter this to your needs.
+ * Also, Use an explicit font stack to ensure browsers render correct
+ * `line-height`.
+ */
+pre {
+  overflow: auto;
+  /* Add your paddings and background color */
+}
+pre:mark {
+  background: none;
+  border-bottom: 1px solid;
+  color: inherit;
+}
+
+/**
+ * Base Code
+ * --------------------------------------------------------------------------
+ *	Base styles for the <code> element.
+ */
+/**
+ * Code Comments
+ * --------------------------------------------------------------------------
+ * Apply comments inside your code like so...
+ *	
+ *	<code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
+ *
+ */
+.code-comment {
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+
+/**
  * $FIGURE
  * --------------------------------------------------------------------------
  * Needs testing... Not done.
@@ -767,45 +783,6 @@ figure figcaption {
 .figure--split-caption-right figcaption {
   width: 30%;
   padding-right: 12px;
-}
-
-/**
- * $CODE
- * ==========================================================================
- */
-/**
- * Pre Wrap
- * --------------------------------------------------------------------------
- * Use the <pre> tag to wrap your code in as a block. Alter this to your needs.
- * Also, Use an explicit font stack to ensure browsers render correct
- * `line-height`.
- */
-pre {
-  overflow: auto;
-  /* Add your paddings and background color */
-}
-pre:mark {
-  background: none;
-  border-bottom: 1px solid;
-  color: inherit;
-}
-
-/**
- * Base Code
- * --------------------------------------------------------------------------
- *	Base styles for the <code> element.
- */
-/**
- * Code Comments
- * --------------------------------------------------------------------------
- * Apply comments inside your code like so...
- *	
- *	<code>&lt;/div&gt;<span class=code-comment>&lt;!-- /wrapper --&gt;</span></code>
- *
- */
-.code-comment {
-  opacity: 0.75;
-  filter: alpha(opacity=75);
 }
 
 /**
@@ -1089,58 +1066,7 @@ li > ol, li:last-child {
 /**
  * $QUOTES
  * ==========================================================================
- * If English quotes are set in "base/_variables.scss", and are defined here.
  */
-/**
- * Big up @boblet: html5doctor.com/blockquote-q-cite
- */
-/**
- * Inline quotes.
- */
-q {
-  quotes: "\2018" "\2019" "\201C" "\201D";
-}
-q:before {
-  content: "\2018";
-  content: open-quote;
-}
-q:after {
-  content: "\2019";
-  content: close-quote;
-}
-q q:before {
-  content: "\201C";
-  content: open-quote;
-}
-q q:after {
-  content: "\201D";
-  content: close-quote;
-}
-
-blockquote {
-  quotes: "\201C" "\201D";
-}
-blockquote p:before {
-  content: "\201C";
-  content: open-quote;
-}
-blockquote p:after {
-  content: "";
-  content: no-close-quote;
-}
-blockquote p:last-of-type:after {
-  content: "\201D";
-  content: close-quote;
-}
-blockquote q:before {
-  content: "\2018";
-  content: open-quote;
-}
-blockquote q:after {
-  content: "\2019";
-  content: close-quote;
-}
-
 /**
  *
    <blockquote>
@@ -1472,8 +1398,21 @@ td {
 }
 
 /**
- * Vitamin U (Utilities)
- * --------------------------------------------------------------------------
+ * $INTERLUDE
+ * ==========================================================================
+ * This is a typically a break in the content where useful information is
+ * placed.
+ */
+/**
+ * $MASTHEAD
+ * ==========================================================================
+ * Masthead is used as the top section on pages, typically containing the 
+ * page title.
+ */
+/**
+ * $NAVBAR
+ * ==========================================================================
+ * This is the main navbar shown at the top of the page.
  */
 /**
  * $GRID
@@ -2288,32 +2227,9 @@ td {
   }
 }
 /**
- * Vitamin M (Modules)
- * --------------------------------------------------------------------------
- */
-/**
- * $MASTHEAD
- * ==========================================================================
- * Masthead is used as the top section on pages, typically containing the 
- * page title.
- */
-/**
- * $NAVBAR
- * ==========================================================================
- * This is the main navbar shown at the top of the page.
- */
-/**
- * $INTERLUDE
- * ==========================================================================
- * This is a typically a break in the content where useful information is
- * placed.
- */
-/**
- * Vitamin V (Views)
- * --------------------------------------------------------------------------
- */
-/**
  * $LANDING
  * ==========================================================================
  * This is a placeholder and example for a view.
  */
+
+/*# sourceMappingURL=styles.css.map */

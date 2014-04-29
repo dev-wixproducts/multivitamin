@@ -1,7 +1,7 @@
 {
-	"name": "vitamin-grunt",
+	"name": "multivitamin",
 	"version": "0.1.0",
-	"homepage": "https://github.com/stefan-erickson/vitamin-grunt",
+	"homepage": "https://github.com/stefanerickson/multivitamin",
 	"author": "Stefan Erickson",
 	"devDependencies": {
 		"grunt": "~0.4.4",
