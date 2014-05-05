@@ -6,8 +6,7 @@ module.exports = function(grunt) {
 		clean: {
 			scripts: ['js/scripts.js', 'js/scripts.min.js'],
 			vendors: ['js/vendors.js', 'js/vendors.min.js'],
-			styles: ['css/styles.css', 'css/styles.min.css'],
-			concat: ['css/src/vitamins.scss']
+			styles: ['css/styles.css', 'css/styles.min.css']
 		},
 
 		// Concats all javascript and SASS
@@ -19,10 +18,6 @@ module.exports = function(grunt) {
 			vendors: {
 				src: ['js/src/vendors/*.js'],
 				dest: 'js/vendors.js'
-			},
-			styles: {
-				src: ['css/src/base/variables.scss', 'css/src/**/*.scss'],
-				dest: 'css/src/vitamins.scss'
 			}
 		},
 
@@ -85,7 +80,7 @@ module.exports = function(grunt) {
 			},
 			styles: {
 				files: 'css/**/*.scss',
-				tasks: ['clean:styles', 'dist-css'],
+				tasks: ['clean:styles', 'dist-styles'],
 				options: {
 					livereload: true,
 				}
@@ -113,7 +108,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('dist-vendors', ['clean:vendors', 'concat:vendors', 'uglify:vendors']);
 
 	// Styles distribution task
-	grunt.registerTask('dist-styles', ['clean:styles', 'clean:concat', 'concat:styles', 'sass', 'autoprefixer', 'cssmin', 'clean:concat']);
+	grunt.registerTask('dist-styles', ['clean:styles', 'sass', 'autoprefixer', 'cssmin']);
 
 	// Full distribution task
 	grunt.registerTask('dist', ['dist-scripts', 'dist-vendors', 'dist-styles']);
