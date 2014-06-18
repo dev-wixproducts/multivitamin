@@ -72,9 +72,6 @@
  * Breakpoints based on screen size
  */
 /**
- * Defined end-points for Media Queries
- */
-/**
  * Base UI colors
  * --------------------------------------------------------------------------
  * This $ui-color is simply serving as a placeholder, and is not used.
@@ -1419,6 +1416,16 @@ td {
   margin: 0 auto;
   padding: 0 24px;
 }
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 768px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
 
 .grid {
   display: block;
@@ -1588,13 +1595,13 @@ td {
  * access to these classes. You can define at which breakpoint you’d like an
  * element to be a certain size, e.g.:
  *
- * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
+ * `<div class="grid__item  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
  *
  * This would create a "div" that, at "desktop" sizes, takes up a quarter of the
  * horizontal space, a half of that space at "tablet" sizes, and goes full width
  * at "mobile" sizes.
  */
-@media only screen and (max-width: 499px) {
+@media only screen and (max-width: 768px) {
   /**
   * Whole
   */
@@ -1718,7 +1725,7 @@ td {
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 500px) and (max-width: 999px) {
+@media only screen and (max-width: 1024px) {
   /**
   * Whole
   */
@@ -1842,255 +1849,7 @@ td {
     width: 91.666%;
   }
 }
-@media only screen and (min-width: 500px) {
-  /**
-  * Whole
-  */
-  .lap-and-up-one-whole {
-    width: 100%;
-  }
-
-  /**
-  * Halves
-  */
-  .lap-and-up-one-half, .lap-and-up-two-quarters, .lap-and-up-three-sixths, .lap-and-up-four-eighths, .lap-and-up-five-tenths, .lap-and-up-six-twelfths {
-    width: 50%;
-  }
-
-  /**
-  * Thirds
-  */
-  .lap-and-up-one-third, .lap-and-up-two-sixths, .lap-and-up-four-twelfths {
-    width: 33.333%;
-  }
-
-  .lap-and-up-two-thirds, .lap-and-up-four-sixths, .lap-and-up-eight-twelfths {
-    width: 66.666%;
-  }
-
-  /**
-  * Quarters
-  */
-  .lap-and-up-one-quarter, .lap-and-up-two-eighths, .lap-and-up-three-twelfths {
-    width: 25%;
-  }
-
-  .lap-and-up-three-quarters, .lap-and-up-six-eighths, .lap-and-up-nine-twelfths {
-    width: 75%;
-  }
-
-  /**
-  * Fifths
-  */
-  .lap-and-up-one-fifth, .lap-and-up-two-tenths {
-    width: 20%;
-  }
-
-  .lap-and-up-two-fifths, .lap-and-up-four-tenths {
-    width: 40%;
-  }
-
-  .lap-and-up-three-fifths, .lap-and-up-six-tenths {
-    width: 60%;
-  }
-
-  .lap-and-up-four-fifths, .lap-and-up-eight-tenths {
-    width: 80%;
-  }
-
-  /**
-  * Sixths
-  */
-  .lap-and-up-one-sixth, .lap-and-up-two-twelfths {
-    width: 16.666%;
-  }
-
-  .lap-and-up-five-sixths, .lap-and-up-ten-twelfths {
-    width: 83.333%;
-  }
-
-  /**
-  * Eighths
-  */
-  .lap-and-up-one-eighth {
-    width: 12.5%;
-  }
-
-  .lap-and-up-three-eighths {
-    width: 37.5%;
-  }
-
-  .lap-and-up-five-eighths {
-    width: 62.5%;
-  }
-
-  .lap-and-up-seven-eighths {
-    width: 87.5%;
-  }
-
-  /**
-  * Tenths
-  */
-  .lap-and-up-one-tenth {
-    width: 10%;
-  }
-
-  .lap-and-up-three-tenths {
-    width: 30%;
-  }
-
-  .lap-and-up-seven-tenths {
-    width: 70%;
-  }
-
-  .lap-and-up-nine-tenths {
-    width: 90%;
-  }
-
-  /**
-  * Twelfths
-  */
-  .lap-and-up-one-twelfth {
-    width: 8.333%;
-  }
-
-  .lap-and-up-five-twelfths {
-    width: 41.666%;
-  }
-
-  .lap-and-up-seven-twelfths {
-    width: 58.333%;
-  }
-
-  .lap-and-up-eleven-twelfths {
-    width: 91.666%;
-  }
-}
-@media only screen and (max-width: 999px) {
-  /**
-  * Whole
-  */
-  .portable-one-whole {
-    width: 100%;
-  }
-
-  /**
-  * Halves
-  */
-  .portable-one-half, .portable-two-quarters, .portable-three-sixths, .portable-four-eighths, .portable-five-tenths, .portable-six-twelfths {
-    width: 50%;
-  }
-
-  /**
-  * Thirds
-  */
-  .portable-one-third, .portable-two-sixths, .portable-four-twelfths {
-    width: 33.333%;
-  }
-
-  .portable-two-thirds, .portable-four-sixths, .portable-eight-twelfths {
-    width: 66.666%;
-  }
-
-  /**
-  * Quarters
-  */
-  .portable-one-quarter, .portable-two-eighths, .portable-three-twelfths {
-    width: 25%;
-  }
-
-  .portable-three-quarters, .portable-six-eighths, .portable-nine-twelfths {
-    width: 75%;
-  }
-
-  /**
-  * Fifths
-  */
-  .portable-one-fifth, .portable-two-tenths {
-    width: 20%;
-  }
-
-  .portable-two-fifths, .portable-four-tenths {
-    width: 40%;
-  }
-
-  .portable-three-fifths, .portable-six-tenths {
-    width: 60%;
-  }
-
-  .portable-four-fifths, .portable-eight-tenths {
-    width: 80%;
-  }
-
-  /**
-  * Sixths
-  */
-  .portable-one-sixth, .portable-two-twelfths {
-    width: 16.666%;
-  }
-
-  .portable-five-sixths, .portable-ten-twelfths {
-    width: 83.333%;
-  }
-
-  /**
-  * Eighths
-  */
-  .portable-one-eighth {
-    width: 12.5%;
-  }
-
-  .portable-three-eighths {
-    width: 37.5%;
-  }
-
-  .portable-five-eighths {
-    width: 62.5%;
-  }
-
-  .portable-seven-eighths {
-    width: 87.5%;
-  }
-
-  /**
-  * Tenths
-  */
-  .portable-one-tenth {
-    width: 10%;
-  }
-
-  .portable-three-tenths {
-    width: 30%;
-  }
-
-  .portable-seven-tenths {
-    width: 70%;
-  }
-
-  .portable-nine-tenths {
-    width: 90%;
-  }
-
-  /**
-  * Twelfths
-  */
-  .portable-one-twelfth {
-    width: 8.333%;
-  }
-
-  .portable-five-twelfths {
-    width: 41.666%;
-  }
-
-  .portable-seven-twelfths {
-    width: 58.333%;
-  }
-
-  .portable-eleven-twelfths {
-    width: 91.666%;
-  }
-}
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1024px) {
   /**
   * Whole
   */

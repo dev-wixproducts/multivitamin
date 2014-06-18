@@ -102,7 +102,7 @@
  * access to these classes. You can define at which breakpoint you’d like an
  * element to be a certain size, e.g.:
  *
- * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
+ * `<div class="grid__item  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
  *
  * This would create a "div" that, at "desktop" sizes, takes up a quarter of the
  * horizontal space, a half of that space at "tablet" sizes, and goes full width
@@ -114,16 +114,8 @@
 	    @include grid-setup("palm-");
 	}
 
-	@include media-query(lap){
-	    @include grid-setup("lap-");
-	}
-
-	@include media-query(lap-and-up){
-	    @include grid-setup("lap-and-up-");
-	}
-
 	@include media-query(portable){
-	    @include grid-setup("portable-");
+	    @include grid-setup("lap-");
 	}
 
 	@include media-query(desk){

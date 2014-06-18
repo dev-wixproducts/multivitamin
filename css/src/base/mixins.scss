@@ -133,21 +133,12 @@
  */
 @mixin media-query($media-query){
     @if $media-query == palm {
-        @media only screen and (max-width:$palm-end) { @content; }
-    }
-    @if $media-query == lap {
-        @media only screen and (min-width:$lap-start) and (max-width:$lap-end) { @content; }
-    }
-    @if $media-query == lap-and-up {
-        @media only screen and (min-width:$lap-start) { @content; }
+        @media only screen and (max-width:$palm-start) { @content; }
     }
     @if $media-query == portable {
-        @media only screen and (max-width:$lap-end) { @content; }
+        @media only screen and (max-width:$portable-start) { @content; }
     }
     @if $media-query == desk {
-        @media only screen and (min-width:$desk-start) { @content; }
-    }
-    @if $media-query == desk-wide {
-        @media only screen and (min-width: $desk-wide-start) { @content; }
+        @media only screen and (min-width:$portable-start) { @content; }
     }
 }

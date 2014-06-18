@@ -8,6 +8,13 @@
 	max-width: $container-width;
 	margin: 0 auto;
     padding: 0 $spacing-unit-base;
+
+    @include media-query(portable){
+        width: $palm-start;
+    }
+    @include media-query(palm){
+        width: 100%;
+    }
 }
 
 .grid {

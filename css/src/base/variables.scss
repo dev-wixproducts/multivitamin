@@ -9,7 +9,7 @@
  * This will apply "*, *:before, *:after { box-sizing: border-box }" in
  * "_scaffolding.scss" if set to true, and is necessary if using Vitamin F.
  */
-$border-box-global: 		true!default;
+$border-box-global: 		true;
 
 /**
  * Set global position relative? (True/False)
@@ -17,7 +17,7 @@ $border-box-global: 		true!default;
  * This will apply "*, *:before, *:after { position: relative }" in
  * "_scaffolding.scss" if set to true.
  */
-$position-relative-global:	true!default;
+$position-relative-global:	true;
 
 /**
  * Base type configurations
@@ -31,10 +31,10 @@ $position-relative-global:	true!default;
  * 2. Used as a divisor in the same mixin as mentioned in (2) in order to 
  *    calculate the appropriate line-height for those font-sizes.
  */
-$font-size-base: 			16px!default; /* 1 */
-$line-height-base: 			24px!default; /* 2 */
+$font-size-base: 			16px; /* 1 */
+$line-height-base: 			24px; /* 2 */
 $line-height-ratio: 		$line-height-base / $font-size-base;
-$font-family-base: 			sans-serif!default;
+$font-family-base: 			sans-serif;
 
 /**
  * Utility font sizes
@@ -43,20 +43,20 @@ $font-family-base: 			sans-serif!default;
  * 2. Applied to ".lead" class, for slightly larger paragraphs in 
  *    "components/_paragraphs.scss".
  */
-$font-size-small: 			12px!default; /* 1 */
-$font-size-lead: 			20px!default; /* 2 */
+$font-size-small: 			12px; /* 1 */
+$font-size-lead: 			20px; /* 2 */
 
 /**
  * Heading font sizes
  * --------------------------------------------------------------------------
  * All headings as well as "<hgroup>" are styled in "components/_headings.scss".
  */
-$font-size-h1:           	36px!default;
-$font-size-h2:           	30px!default;
-$font-size-h3:           	24px!default;
-$font-size-h4:           	20px!default;
-$font-size-h5:           	16px!default;
-$font-size-h6:           	14px!default;
+$font-size-h1:           	36px;
+$font-size-h2:           	30px;
+$font-size-h3:           	24px;
+$font-size-h4:           	20px;
+$font-size-h5:           	16px;
+$font-size-h6:           	14px;
 
 
 /**
@@ -67,7 +67,7 @@ $font-size-h6:           	14px!default;
  * The half spacing unit is primarily used for margins on floated objects
  * and form fields.
  */
-$spacing-unit-base: 		$line-height-base!default;
+$spacing-unit-base: 		$line-height-base;
 $spacing-unit-half: 		$spacing-unit-base / 2;
 
 /**
@@ -76,22 +76,16 @@ $spacing-unit-half: 		$spacing-unit-base / 2;
  * Variables relative to the Grid, starting with weather or not you want to
  * make it responsive.
  */
-$responsive: 				true!default;
+$responsive: 				true;
 /**
  * Container widths (Sets max content width)
  */
-$container-width: 			960px!default;
+$container-width: 			960px;
 /**
  * Breakpoints based on screen size
  */
-$lap-start:         		500px!default;
-$desk-start:       			1000px!default;
-$desk-wide-start:   		1280px!default;
-/**
- * Defined end-points for Media Queries
- */
-$palm-end:              	$lap-start - 1px;
-$lap-end:               	$desk-start - 1px;
+$palm-start:				768px;
+$portable-start:         	1024px;
 
 /**
  * Base UI colors
