@@ -7,7 +7,7 @@
     box-sizing: content-box;
 	max-width: $container-width;
 	margin: 0 auto;
-    padding: 0 $spacing-unit-base;
+    padding: 0 $spacing-unit-grid;
 
     @include media-query(portable){
         width: $palm-start;
@@ -21,7 +21,7 @@
     display: block;
     margin: 0 auto;
     font-size: 0;
-    margin-left: -$spacing-unit-base;
+    margin-left: -$spacing-unit-grid;
 
     .grid {
     	padding: 0;
@@ -36,16 +36,14 @@
         }
     }
 }
-.grid--block {
-    margin-bottom: $spacing-unit-base;
-    margin-bottom: ($spacing-unit-base / $font-size-base)*1rem;
-}
-
-.grid__item {
-    display: inline-block;
-    font-size: 1rem;
-    margin: 0;
-    padding-left: $spacing-unit-base;
-    text-align: left;
-    vertical-align: top;
-}
+    .grid__item {
+        display: inline-block;
+        font-size: 1rem;
+        margin: 0;
+        padding-left: $spacing-unit-grid;
+        text-align: left;
+        vertical-align: top;
+    }
+        .grid--block {
+            margin-bottom: $spacing-unit-grid;
+        }
